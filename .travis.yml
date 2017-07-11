@@ -18,6 +18,8 @@ script:
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
   slack:
+    on_failure: change
+    on_success: change
     rooms:
       secure: oMKMN29rmIc9UkWwSuT93nFLvS5DdYmV86ZDcORL43ZGsQAYUaloLLUwGUyvwPSRX2asT8SM2y1fruWhgWZkoJ+BCeJltdA1vY8NcP5Fyt9B0u1HGP3CaLy7bdXUvabHYoAKaRhB9I0TZqBZyalgu1mqA0Dd4CBpZ1xbcZBRTBfA+z7tcnXc8kUVHlCRe2d4cMcTRx6aUSkdr3FMxtbRk21t2BAE92PKzXBCnJVx/kHhzhqI70PB82pFqfeO7cb2EGioeS5wXLTQ5SFP7gkU/h9OhhGgAU5lQY8xUTZ52/wcMz+Batnn8XyxB99IpBVUlwcsFTCmJ2ktiP6SUAiZnMWkxizbGGvxar4rc+Mmkxa/Pbrr0nHzCSJnl7X7FtWJ7G7LuadWdCRUd/OE7Ho8n2pI13JMx8AUzXA0Yh+0VrEJKjmTZ2j8H5ZLHN6MSB9RTun+AecfAG+T5BrhPDBOP3qRDYoqs9TVuP0vsZUvzOQJ8+5srlt0C6CKyyP0VwQ2+uxmijHQzA+Ni9izQgdo5Nn/cs277ww1gSmau9fV2N366Ga18LjwHwsndDpeKfKFVjHn6j7SrFVbRIsgGI5ehJy735S6Zjei26SbJO8lKxFNrDG+mm9374LAt1B+7BEeFo8Cql+glXmsifYJLzf4BZzSOavtrj4DQnhTufxrnqE=
 env:
