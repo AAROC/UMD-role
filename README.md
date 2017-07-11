@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AAROC/UMD-role.svg?branch=master)](https://travis-ci.org/AAROC/UMD-role)
+
 Unified Middleware Distribution
 =========
 
