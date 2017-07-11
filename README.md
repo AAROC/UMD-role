@@ -10,7 +10,6 @@ This Ansible role configures the host for the installation of [EGI Software prod
 
 The role configures the correct repositories and installs signing keys, as well as the middleware role you wish to add to the host.
 
-
 Requirements
 ------------
 
@@ -31,10 +30,12 @@ No explicit dependencies.
 Example Playbook
 ----------------
 
+An example playbook can be seen in the [AAROC DevOps repo](https://github.com/AAROC/DevOps/blob/master/Ansible/top-bdiis.yml)
 
-    - hosts: servers
+    - hosts: <umd_service>-servers
       roles:
-         - { role: AAROC.umd, umd_service: top-bdii }
+         - { role: UMD-role, become: true, tags: "umd", umd_service: "emi-bdii-top", enable_umd: true, enable_preview: false, umd_version: 4 }
+
 
 License
 -------
@@ -46,3 +47,5 @@ Author Information
 
 Bruce Becker brucellino@gmail.com
 <a href="https://orcid.org/0000-0002-6607-7145" target="_blank" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-6607-7145</a>
+
+# Citing

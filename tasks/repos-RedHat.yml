@@ -16,35 +16,7 @@
     gpgcheck: yes
   with_items: "{{ umd_repos[umd_version][ansible_distribution][ansible_distribution_major_version] }}"
 
-
-
 - name: Ensure prorities plugin is configured
   copy:
     src: etc/yum/pluginconf.d/priorities.conf
     dest: /etc/yum/pluginconf.d/prorities.conf
-
-- name: Ensure UMD repos are enabled
-  lineinfile:
-    dest: "/etc/yum.repos.d/{{ item }}"
-    regexp: ^enabled=
-    line: enabled=1
-  with_items:
-    - UMD-3-base.repo
-    - UMD-3-updates.repo
-  tags:
-    - UMD
-
-
-- name: Set priorities of UMD repos
-  lineinfile:
-    dest: /etc/yum.repos.d/{{ item }}
-    regexp: '^priority='
-    line: 'priority=1'
-    insertafter: 'enabled=1'
-  with_items:
-    - UMD-3-base.repo
-    - UMD-3-updates.repo
-  tags:
-    - UMD_priority
-    - UMD
-  # when umd3...

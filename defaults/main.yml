@@ -17,51 +17,65 @@ umd_repos:
       key: http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
       squeeze:
         - name: squeeze
+          description: squeeze
           url: "http://repository.egi.eu/sw/production/umd/3/debian/"
         - name: squeeze-updates
+          description: squeeze-updates
           url: http://repository.egi.eu/sw/production/umd/3/debian/
     RedHat:
       key: http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
       "6":
         - name: "UMD-3-base"
-        - baseurl: "http://repository.egi.eu/sw/production/umd/3/sl6/{{ ansible_architecture }}/base"
+          description: "UMD-3-base"
+          baseurl: "http://repository.egi.eu/sw/production/umd/3/sl6/{{ ansible_architecture }}/base"
     CentOS:
       key: http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
       "6":
-        - name: "UMD-3-base"
-        - baseurl: "http://repository.egi.eu/sw/production/umd/3/sl6/{{ ansible_architecture }}/base"
+        - name: "UMD-3-bae"
+          description: "UMD-3-base"
+          baseurl: "http://repository.egi.eu/sw/production/umd/3/sl6/{{ ansible_architecture }}/base"
 # there is no RedHat 7 repo for UMD3
   4:
     Ubuntu:
       key: http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
       "trusty":
         - name: trusty
+          description: trusty
           url: "http://repository.egi.eu/sw/production/umd/4/ubuntu-trusty/"
         - name: trusty-updates
+          description: trusty-updates
           url: http://repository.egi.eu/sw/production/umd/4/trusty-updates
     RedHat:
       key: "http://emisoft.web.cern.ch/emisoft/dist/EMI/3/RPM-GPG-KEY-emi http://repo-rpm.ige-project.eu/RPM-GPG-KEY-IGE http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY http://www.qoscosgrid.org/qcg-packages/sl5/RPM-GPG-KEY-QCG http://download.nordugrid.org/RPM-GPG-KEY-nordugrid http://fedoraproject.org/static/0608B895.txt"
-      6:
+      "6":
         - name: "UMD-4-base"
+          description: "UMD-4-base"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/sl6/{{ ansible_architecture }}/base"
-        - name: "UMD 4 updates (SL6)"
+        - name: "UMD-4-updates-sl6"
+          description: "UMD-4-updates (SL6)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/sl6/{{ ansible_architecture }}/updates"
       7:
-        - name: "UMD 4 base (CentOS7)"
+        - name: "UMD-4-base-RH7"
+          description: "UMD 4 base (CentOS7)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/centos7/{{ ansible_architecture }}/base"
-        - name: "UMD 4 updates (CentOS7)"
+        - name: "UMD-4-updates-RH7"
+          description: "UMD 4 updates (CentOS7)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/centos7/{{ ansible_architecture }}/updates"
     CentOS:
       key: "http://emisoft.web.cern.ch/emisoft/dist/EMI/3/RPM-GPG-KEY-emi http://repo-rpm.ige-project.eu/RPM-GPG-KEY-IGE http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY http://www.qoscosgrid.org/qcg-packages/sl5/RPM-GPG-KEY-QCG http://download.nordugrid.org/RPM-GPG-KEY-nordugrid http://fedoraproject.org/static/0608B895.txt"
       "6":
         - name: "UMD-4-base"
+          description: "UMD-4-base"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/sl6/{{ ansible_architecture }}/base"
-        - name: "UMD 4 updates (SL6)"
+        - name: "UMD-4-updates-centos6"
+          description: "UMD 4 updates (SL6)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/sl6/{{ ansible_architecture }}/updates"
       "7":
-        - name: "UMD 4 base (CentOS7)"
+        - name: "UMD-4-base-centos7"
+          description: "UMD 4 base (CentOS7)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/centos7/{{ ansible_architecture }}/base"
-        - name: "UMD 4 updates (CentOS7)"
+        - name: "UMD-4-updates-centos7"
+          description: "UMD 4 updates (CentOS7)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/centos7/{{ ansible_architecture }}/updates"
 
 # CMD = Cloud Middleware Distribution.
@@ -82,13 +96,13 @@ preview_repos:
   Debian:
     key: http://repository.egi.eu/community/keys/APPDBCOMM-DEB-PGP-KEY.asc
     squeeze:
-      - name: squeeze
+      - description: squeeze
         url: http://repository.egi.eu/community/software/preview.repository/1.0/releases/debian
   RedHat:
     6:
-      - name: "Repository for preview.repository (o/s: sl6 arch: x86_64)"
+      - description: "Repository for preview.repository (o/s: sl6 arch: x86_64)"
         baseurl: "http://repository.egi.eu/community/software/preview.repository/1.0/releases/sl/6/{{ ansible_architecture }}/RPMS/"
         key:
     7:
-      - name: "Repository for preview.repository (o/s: centos7 arch: x86_64)"
+      - description: "Repository for preview.repository (o/s: centos7 arch: x86_64)"
         baseurl: "http://repository.egi.eu/community/software/preview.repository/2.0/releases/centos/7/{{ ansible_architecture }}/RPMS/"
