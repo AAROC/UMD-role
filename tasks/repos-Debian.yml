@@ -1,13 +1,13 @@
 ---
 - debug:
-    var: cmd
+    var: umd
   tags:
     - debug
 
 - debug:
     var: "{{ item }}"
   with_items:
-    cmd.repos.Debian
+    umd.repos.Debian
   tags:
     - debug
 - name: add the EGI APT key
@@ -22,7 +22,7 @@
   apt_repository:
     repo: "deb {{ item.url }} {{ item.name }} main"
     state: present
-  with_items: cmd.repos.Debian
+  with_items: umd.repos.Debian
   tags:
     - repos
     - apt

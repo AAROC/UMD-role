@@ -16,8 +16,9 @@ umd:
         key:  http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
 
     RedHat:
-      url:
-      key:
+      - name:
+        url:
+        key:
 
 # CMD = Cloud Middleware Distribution.
 # This variable describes where the repo urls and signing keys are for the
