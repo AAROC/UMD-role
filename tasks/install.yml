@@ -1,0 +1,7 @@
+---
+# Install tasks for UMD products
+- name: "Install {{ umd_service }}"
+  package:
+    name: "{{ umd_service }}"
+    state: latest
+    update_cache: true
