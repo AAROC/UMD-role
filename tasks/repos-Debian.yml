@@ -1,4 +1,15 @@
 ---
+- debug:
+    var: cmd
+  tags:
+    - debug
+
+- debug:
+    var: "{{ item }}"
+  with_items:
+    cmd.repos.Debian
+  tags:
+    - debug
 - name: add the EGI APT key
   apt_key:
     url: http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
