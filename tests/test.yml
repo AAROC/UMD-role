@@ -2,5 +2,16 @@
 - hosts: localhost
   remote_user: root
   become: true
+  pre_tasks:
+  - name: Tell the team
+    slack:
+      token: "{{ slack_token }}"
+      msg: "testing UMD role on {{ ansible_hostname }} at Travis"
+      username: "Ansible on {{ ansible_hostname }} at Travis"
+      validate_certs: False
+      channel: "{{ slack_channel }}"
+      icon_emoji: ansible
+    tags:
+      - slack
   roles:
-    - UMD-role
+    - {role: UMD-role, umd_service: top-bdii}

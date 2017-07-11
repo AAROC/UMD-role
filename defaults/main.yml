@@ -1,2 +1,26 @@
 ---
 # defaults file for umd
+
+# UMD = Unified Middleware Distribution.
+# This variable describes where the repo urls and signing keys are for the
+# Debian and RedHat/CEntOS flavours
+umd:
+  repos:
+    Debian:
+      url:
+      key:
+    RedHat:
+      url:
+      key:
+
+# CMD = Cloud Middleware Distribution.
+# This variable describes where the repo urls and signing keys are for the
+# Debian and RedHat/CEntOS flavours
+cmd:
+  repos:
+    Debian:
+      url:
+      key:
+    RedHat:
+      url:
+      key:
