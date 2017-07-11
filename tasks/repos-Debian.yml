@@ -7,16 +7,11 @@
     - repos
     - apt
 
-- name: get the deb
-  get_url:
-    url: 
-    dest: /tmp/umd-release-3.0.0_all.deb
-
-- name: add the release package
-  apt:
-    deb: /tmp/umd-release-3.0.0_all.deb
+- name: Add repos
+  apt_repository:
+    repo: "deb {{ item.url }} {{ item.name }} main"
     state: present
-    # update_cache: true
+  with_items: cmd.repos.Debian
   tags:
     - repos
     - apt
