@@ -12,7 +12,7 @@ enable_preview: false
 # This variable describes where the repo urls and signing keys are for the
 # Debian and RedHat/CEntOS flavours
 umd_repos:
-  "3":
+  3:
     Debian:
       key: http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
       squeeze:
@@ -35,7 +35,7 @@ umd_repos:
           description: "UMD-3-base"
           baseurl: "http://repository.egi.eu/sw/production/umd/3/sl6/{{ ansible_architecture }}/base"
 # there is no RedHat 7 repo for UMD3
-  "4":
+  4:
     Ubuntu:
       key: http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
       "trusty":
