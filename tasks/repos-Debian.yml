@@ -20,7 +20,7 @@
 
 - name: Add repos
   apt_repository:
-    repo: "deb {{ item.url }} {{ item.name }} main"
+    repo: "deb {{ item.url }} {{ item.description }} main"
     state: present
   with_items: umd_repos.3.Debian.squeeze
   tags:
