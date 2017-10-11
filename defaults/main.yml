@@ -12,7 +12,7 @@ enable_preview: false
 # This variable describes where the repo urls and signing keys are for the
 # Debian and RedHat/CEntOS flavours
 umd_repos:
-  3:
+  "3":
     Debian:
       key: http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
       squeeze:
@@ -31,11 +31,11 @@ umd_repos:
     CentOS:
       key: http://repository.egi.eu/sw/production/umd/UMD-RPM-PGP-KEY
       "6":
-        - name: "UMD-3-bae"
+        - name: "UMD-3-base"
           description: "UMD-3-base"
           baseurl: "http://repository.egi.eu/sw/production/umd/3/sl6/{{ ansible_architecture }}/base"
 # there is no RedHat 7 repo for UMD3
-  4:
+  "4":
     Ubuntu:
       key: http://repository.egi.eu/sw/production/umd/UMD-DEB-PGP-KEY
       "trusty":
@@ -54,7 +54,7 @@ umd_repos:
         - name: "UMD-4-updates-sl6"
           description: "UMD-4-updates (SL6)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/sl6/{{ ansible_architecture }}/updates"
-      7:
+      "7":
         - name: "UMD-4-base-RH7"
           description: "UMD 4 base (CentOS7)"
           baseurl: "http://repository.egi.eu/sw/production/umd/4/centos7/{{ ansible_architecture }}/base"
@@ -99,10 +99,10 @@ preview_repos:
       - description: squeeze
         url: http://repository.egi.eu/community/software/preview.repository/1.0/releases/debian
   RedHat:
-    6:
+    "6":
       - description: "Repository for preview.repository (o/s: sl6 arch: x86_64)"
         baseurl: "http://repository.egi.eu/community/software/preview.repository/1.0/releases/sl/6/{{ ansible_architecture }}/RPMS/"
         key:
-    7:
+    "7":
       - description: "Repository for preview.repository (o/s: centos7 arch: x86_64)"
         baseurl: "http://repository.egi.eu/community/software/preview.repository/2.0/releases/centos/7/{{ ansible_architecture }}/RPMS/"

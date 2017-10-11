@@ -22,7 +22,7 @@
   apt_repository:
     repo: "deb {{ item.url }} {{ item.name }} main"
     state: present
-  with_items: umd_repos.3.Debian
+  with_items: umd_repos.3.Debian.squeeze
   tags:
     - repos
     - apt
