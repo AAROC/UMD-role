@@ -1,4 +1,18 @@
-[![Build Status](https://travis-ci.org/AAROC/UMD-role.svg?branch=master)](https://travis-ci.org/AAROC/UMD-role)
+[![Build Status](https://travis-ci.org/AAROC/UMD-role.svg?branch=master)](https://travis-ci.org/AAROC/UMD-role) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.825841.svg)](https://doi.org/10.5281/zenodo.825841)<!-- provide a detailed description of the issue -->
+
+<!-- try to identify which service this issue is related to -->
+
+# Logs and other information
+
+<!-- please provide any relevant information from logs here
+     Be sure to use the correct markdown formatting e.g.
+    ```
+       log
+       output
+    ```
+-->
+
+
 
 Unified Middleware Distribution
 =========
@@ -49,3 +63,7 @@ Bruce Becker brucellino@gmail.com
 <a href="https://orcid.org/0000-0002-6607-7145" target="_blank" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-6607-7145</a>
 
 # Citing
+
+Cite as
+
+Bruce Becker. (2017, July 11). AAROC/UMD-role: Ansible role for UMD - v0.0.1. Zenodo. http://doi.org/10.5281/zenodo.825841
