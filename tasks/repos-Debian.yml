@@ -1,13 +1,8 @@
 ---
 - debug:
-    var: umd_repos.3.Debian
-  tags:
-    - debug
-
-- debug:
     var: "{{ item }}"
   with_items:
-    umd_repos.3.Debian
+    umd_repos.3.Debian.sqeeze
   tags:
     - debug
 - name: add the EGI APT key
@@ -20,7 +15,7 @@
 
 - name: Add repos
   apt_repository:
-    repo: "deb {{ item.url }} {{ item.description }} main"
+    repo: "deb {{ item.url }} {{ item.name }} main"
     state: present
   with_items: umd_repos.3.Debian.squeeze
   tags:
