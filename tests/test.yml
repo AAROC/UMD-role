@@ -9,7 +9,6 @@
       msg: "testing UMD role on {{ ansible_hostname }} at Travis"
       username: "Ansible on {{ ansible_hostname }} at Travis"
       validate_certs: False
-      channel: "{{ slack_channel }}"
       icon_emoji: ansible
     tags:
       - slack
