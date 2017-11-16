@@ -17,7 +17,7 @@
   apt_repository:
     repo: "deb {{ item.url }} {{ item.name }} main"
     state: present
-  with_items: umd_repos[{{ umd_release | default 3 }}]['Debian']['squeeze']
+  with_items: "umd_repos[{{ umd_release | default 3 }}]['Debian']['squeeze']"
   tags:
     - repos
     - apt
