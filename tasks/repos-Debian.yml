@@ -2,7 +2,7 @@
 - debug:
     var: "{{ item }}"
   with_items:
-    umd_repos.3.Debian.squeeze
+    "umd_repos[{{umd_release | default 3 }}]['Debian']['squeeze']"
   tags:
     - debug
 - name: add the EGI APT key
@@ -17,7 +17,7 @@
   apt_repository:
     repo: "deb {{ item.url }} {{ item.name }} main"
     state: present
-  with_items: umd_repos.3.Debian.squeeze
+  with_items: umd_repos[{{ umd_release | default 3 }}]['Debian']['squeeze']
   tags:
     - repos
     - apt

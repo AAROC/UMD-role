@@ -6,8 +6,12 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
+  - name: CEntOS7
     image: centos:7
+  - name: CEntOS6
+    image: centos:6
+  # - name: Debian Squeeze
+  #   image: debian:squeeze
 provisioner:
   name: ansible
   lint:

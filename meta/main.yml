@@ -1,6 +1,9 @@
+---
 galaxy_info:
   author: Bruce Becker
-  description: Configures the Unified Middleware Distribution and Cloud Middleware Distrbution Stacks on your host
+  description: >
+    Configures the Unified Middleware Distribution and
+    Cloud Middleware Distrbution Stacks on your host
   company: CSIR Meraka Institute
   license: Apache-2.0
 
@@ -9,8 +12,8 @@ galaxy_info:
   platforms:
     - name: CEntOS
       versions:
-      - 6
-      - 7
+        - 6
+        - 7
     - name: Debian
       versions:
         - squeeze
@@ -23,5 +26,6 @@ galaxy_info:
     - egi
 
 dependencies: []
-  # List your role dependencies here, one per line. Be sure to remove the '[]' above,
-  # if you add dependencies to this list.
+# List your role dependencies here, one per line.
+# Be sure to remove the '[]' above,
+# if you add dependencies to this list.
