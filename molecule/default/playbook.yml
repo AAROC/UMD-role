@@ -1,0 +1,5 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - {role: umd-role, umd_version: 4, umd_service: 'BDII_top'}
