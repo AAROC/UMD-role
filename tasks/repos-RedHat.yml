@@ -1,12 +1,5 @@
 ---
 # UMD yum repository.
-- name: debug vars
-  debug:
-    var: "{{ item }}"
-  with_items:
-    - umd_version
-    - umd_repos[umd_version][ansible_distribution].ansible_distribution_major_version
-
 - name: Add umd repository
   yum_repository:
     name: "{{ item.name }}"

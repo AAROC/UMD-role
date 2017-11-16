@@ -4,6 +4,8 @@ python:
   - '2.7'
   - pypy
 sudo: true
+services:
+  - docker
 addons:
   apt:
     packages:
@@ -15,11 +17,6 @@ install:
   - ansible --version
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 script:
-  - ansible-playbook -c local tests/test.yml -i tests/inventory --syntax-check
-  - >
-    ansible-playbook -c local
-    tests/test.yml -i tests/inventory
-    -e slack_token=$SLACK_TOKEN -e slack_channel="devops-foundry"
   - molecule test
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
